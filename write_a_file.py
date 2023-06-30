@@ -1,5 +1,4 @@
-try:
-    with open('test.tx') as file:
-        print(file.read())
-except FileNotFoundError:
-    print("That file was not found:(")
+
+text = "Have a nice day! See ya"
+with open('test0.txt', 'a') as file:
+    file.write(text)
