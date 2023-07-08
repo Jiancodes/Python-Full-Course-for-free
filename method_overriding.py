@@ -4,7 +4,8 @@ class Animal:
         print("Tis animal is eating")
 
 class Rabbit(Animal):
-    pass
+    def eat(self):
+        print("The rabbit is eating a carrot")
 
 
 rabbit = Rabbit()
