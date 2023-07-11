@@ -1,10 +1,10 @@
 language: python
 python: "3.9","3.10","3.11"
 
-notifications:      # 邮箱通知
+notifications:      
   email: mjian528@gmail.com
 
-sudo: false #有定制化开发环境需要，默认false，不开启容器，编译效率高
+sudo: false 
 
 before_install: 
   - pip install codecov 
@@ -16,4 +16,4 @@ script:
   - coverage run main.py
 
 after_success:
-  - codecov #运行codecov
+  - codecov 
