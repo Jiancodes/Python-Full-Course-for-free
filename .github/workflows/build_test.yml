@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -24,12 +23,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade flake8 numpy ipython scipy h5py matplotlib coverage pytest pytest-cov cython codecov
-<<<<<<< HEAD
         python -m pip install --upgrade pip
-=======
         pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt;
->>>>>>> origin
     - name: Lint with flake8
       run: |
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
@@ -39,7 +35,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     name: Publish package
-    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+    if: github.event_name 'push' && startsWith(github.ref, 'refs/tags')
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
