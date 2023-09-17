@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
 
-name: Python package
+name: CI
 
 on:
   push:
@@ -42,7 +42,8 @@ jobs:
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v3
       env:
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        CODECOV_TOKEN: 5ae8389c-ebdb-4558-a8e9-3d514c111969 
       with:
         file: ./codecov.yml
+  
         
